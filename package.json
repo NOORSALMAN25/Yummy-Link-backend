@@ -1,0 +1,26 @@
+{
+  "name": "yummy-link-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NOORSALMAN25/Yummy-Link-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NOORSALMAN25/Yummy-Link-backend/issues"
+  },
+  "homepage": "https://github.com/NOORSALMAN25/Yummy-Link-backend#readme",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.0",
+    "morgan": "^1.10.1"
+  }
+}
