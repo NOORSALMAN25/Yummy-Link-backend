@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Garden Grill",
+    "openTime": "9:00 AM - 10:00 PM",
+    "description": "Grilled food by the lake. Perfect for a picnic vibe.",
+    "image": "/images/grill.png",
+    "menu": [
+      { "name": "Grilled Chicken Wrap", "price": 3.0 },
+      { "name": "Lemonade", "price": 1.0 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pizza Park",
+    "openTime": "12:00 PM - 11:00 PM",
+    "description": "Wood-fired pizza served hot in the heart of the park.",
+    "image": "/images/pizza-box.png",
+    "menu": [
+      { "name": "Pepperoni Pizza", "price": 4.0 },
+      { "name": "Choco Milkshake", "price": 1.8 }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Sweet Corner",
+    "openTime": "10:00 AM - 9:00 PM",
+    "description": "Ice cream, waffles, and all things sweet.",
+    "image": "/images/ice-cream.png",
+    "menu": [
+      { "name": "Waffle with Berries", "price": 2.5 },
+      { "name": "Vanilla Ice Cream", "price": 1.2 }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Falafel Station",
+    "openTime": "8:00 AM - 3:00 PM",
+    "description": "Authentic Middle Eastern falafel and hummus.",
+    "image": "/images/falafel.png",
+    "menu": [
+      { "name": "Falafel Wrap", "price": 2.0 },
+      { "name": "Hummus Bowl", "price": 1.5 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Juice Junction",
+    "openTime": "9:00 AM - 10:00 PM",
+    "description": "Refreshing natural juices and smoothies.",
+    "image": "/images/juices.png",
+    "menu": [
+      { "name": "Mango Smoothie", "price": 2.2 },
+      { "name": "Watermelon Juice", "price": 1.8 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Snack Shack",
+    "openTime": "4:00 PM - 12:00 AM",
+    "description": "Quick bites and snacks for evening strolls.",
+    "image": "/images/popcorn.png",
+    "menu": [
+      { "name": "Popcorn Box", "price": 1.0 },
+      { "name": "Mini Hotdogs", "price": 2.0 }
+    ]
+  }
+]
