@@ -3,7 +3,8 @@ const reviewCtrl = require('../controllers/reviewController')
 const router = require('express').Router()
 
 router.get('/', storeCtrl.store_getAll)
-router.get('/search', storeCtrl.store_getById)
+router.get('/search', storeCtrl.store_search)
+router.get('/:id', storeCtrl.store_getById)
 
 //the  reviews routes
 router.get('/:id', reviewCtrl.reviews_getAll)
