@@ -1,5 +1,6 @@
 const Review = require('../models/review')
 
+//reviews routes
 exports.reviews_getAll = async (res, req) => {
   try {
     const reviews = await Review.find({})
