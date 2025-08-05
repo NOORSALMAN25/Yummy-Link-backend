@@ -1,5 +1,8 @@
 const express = require('express')
 const logger = require('morgan')
+const cors = require('cors')
+
+const storeRouter = require('./Routes/store')
 
 const PORT = process.env.PORT || 3000
 
@@ -10,6 +13,7 @@ const app = express()
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+app.use(cors())
 
 app.use('/', (req, res) => {
   res.send(`Connected!`)
