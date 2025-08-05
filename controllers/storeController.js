@@ -7,7 +7,9 @@ exports.store_getAll = async (req, res) => {
 }
 
 exports.store_getById = async (req, res) => {
-  const storeId = parseInt(req.params.id)
+  console.log("hhello")
+  console.log(req.query.search)
+  const storeId = parseInt(req.query.search)
 
   const store = stores.find((store) => store.storeId === storeId)
   if (!store) res.status(401).send({ status: 'Error', msg: 'no store found' })
