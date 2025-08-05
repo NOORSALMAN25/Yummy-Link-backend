@@ -15,9 +15,11 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 
-app.use('/', (req, res) => {
-  res.send(`Connected!`)
-})
+// app.use('/', (req, res) => {
+//   res.send(`Connected!`)
+// })
+
+app.use('/', storeRouter)
 
 app.listen(PORT, () => {
   console.log(`Running Express server on Port ${PORT} . . .`)
