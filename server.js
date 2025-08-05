@@ -1,6 +1,7 @@
 const express = require('express')
 const logger = require('morgan')
 const cors = require('cors')
+const path = require('path')
 
 const storeRouter = require('./Routes/store')
 
@@ -14,6 +15,7 @@ app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cors())
+app.use('/images', express.static(path.join(__dirname, 'images')))
 
 // app.use('/', (req, res) => {
 //   res.send(`Connected!`)
