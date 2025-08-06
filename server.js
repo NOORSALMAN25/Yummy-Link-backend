@@ -3,7 +3,7 @@ const logger = require('morgan')
 const cors = require('cors')
 const path = require('path')
 
-const storeRouter = require('./Routes/store')
+const storeRouter = require('./routes/store')
 
 const PORT = process.env.PORT || 3000
 
@@ -21,7 +21,7 @@ app.use('/images', express.static(path.join(__dirname, 'images')))
 //   res.send(`Connected!`)
 // })
 
-app.use('/', storeRouter)
+app.use('/stores', storeRouter)
 
 app.listen(PORT, () => {
   console.log(`Running Express server on Port ${PORT} . . .`)
