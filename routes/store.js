@@ -7,8 +7,13 @@ router.get('/search', storeCtrl.store_search)
 router.get('/:id', storeCtrl.store_getById)
 
 //the  reviews routes
-router.get('/:id', reviewCtrl.reviews_getAll)
-router.post('/:id', reviewCtrl.reviews_create_post)
-router.delete('/:id', reviewCtrl.reviews_delete_delete)
+// GET /stores/:storeId/reviews
+router.get('/:storeId/reviews', reviewCtrl.reviews_getAll)
+
+// POST /stores/:storeId/reviews
+router.post('/:storeId/reviews', reviewCtrl.reviews_create_post)
+
+// DELETE /stores/:storeId/reviews/:reviewId
+router.delete('/:storeId/reviews/:reviewId', reviewCtrl.reviews_delete_delete)
 
 module.exports = router

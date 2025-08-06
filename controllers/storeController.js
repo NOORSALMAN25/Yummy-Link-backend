@@ -16,10 +16,9 @@ exports.store_search = (req, res) => {
 }
 
 exports.store_getById = async (req, res) => {
-  console.log(req.query.id)
-  const storeId = parseInt(req.query.id)
+  const storeId = parseInt(req.params.id)
 
-  const store = stores.find((store) => store.storeId === storeId)
+  const store = stores.find((store) => store.id === storeId)
   if (!store) res.status(404).send({ status: 'Error', msg: 'no store found' })
 
   const review = await Review.find({ storeId })
