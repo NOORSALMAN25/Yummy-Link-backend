@@ -2,6 +2,7 @@ const stores = require('../data/stores.json')
 const Review = require('../models/review')
 
 exports.store_getAll = async (req, res) => {
+  console.log('here')
   res.json(stores)
 }
 
