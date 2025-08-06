@@ -4,6 +4,7 @@ const cors = require('cors')
 const path = require('path')
 
 const storeRouter = require('./routes/store')
+// const ReviewRouter = require('./routes/review')
 
 const PORT = process.env.PORT || 3000
 
@@ -22,6 +23,7 @@ app.use('/images', express.static(path.join(__dirname, 'images')))
 // })
 
 app.use('/stores', storeRouter)
+// app.use('/reviews', ReviewRouter)
 
 app.listen(PORT, () => {
   console.log(`Running Express server on Port ${PORT} . . .`)
