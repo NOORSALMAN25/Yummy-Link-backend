@@ -3,7 +3,8 @@ const Review = require('../models/review')
 // reviews routes
 exports.reviews_getAll = async (req, res) => {
   try {
-    const reviews = await Review.find({})
+    const { storeId } = req.params
+    const reviews = await Review.find({ storeId: storeId })
     res.status(200).json(reviews)
   } catch (error) {
     res.status(500).json({ error: error.message })
@@ -40,8 +41,12 @@ exports.reviews_create_post = async (req, res) => {
 
 exports.reviews_delete_delete = async (req, res) => {
   try {
-    await Review.deleteOne({ _id: req.params.id })
-    res.status(200).send({ msg: 'Review Deleted', id: req.params.id })
+    const { reviewId } = req.params
+
+    const deleted = await Review.findByIdAndDelete(reviewId)
+    if (!deleted) return res.status(404).json({ error: 'Review not found' })
+
+    res.status(200).json({ msg: 'Review Deleted' })
   } catch (error) {
     res.status(500).json({ error: error.message })
   }
